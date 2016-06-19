@@ -59,10 +59,10 @@ BasicGame.Game.prototype = {
 
     preload: function () {
         this.time.advancedTiming = true;
-        this.load.image('sky', 'assets/sky.png');
-        this.load.image('ground', 'assets/platform.png');
-        this.load.image('star', 'assets/star.png');
-        this.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+        this.load.image('sky', 'asset/sky.png');
+        this.load.image('ground', 'asset/platform.png');
+        this.load.image('star', 'asset/star.png');
+        this.load.spritesheet('dude', 'asset/dude.png', 32, 48);
     },
 
     create: function () {
@@ -186,7 +186,7 @@ BasicGame.Game.prototype = {
     
     render: function()
     {
-        this.debug.text(this.time.fps || '--', 2, 14, "#00ff00");   
+        //this.debug.text(this.time.fps || '--', 2, 14, "#00ff00");   
     },
 
     collectStar: function (player, star) {
