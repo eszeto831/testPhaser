@@ -40,6 +40,27 @@
     <!-- Load and initialize Cordova -->
     <script src="cordova.js"></script>
     <script src="src/cordova-init.js"></script>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-database.js"></script>
+
+    <!-- Leave out Storage -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-storage.js"></script> -->
+    
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCCA2vZyeFZvuVZaQ4mx9FWwrDHzX-Kvlc",
+        authDomain: "project-4543937711988661251.firebaseapp.com",
+        databaseURL: "https://project-4543937711988661251.firebaseio.com",
+        storageBucket: "project-4543937711988661251.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+
 </head>
 <body>
     <!-- Main canvas for rendering game stage -->

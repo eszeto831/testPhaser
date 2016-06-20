@@ -132,7 +132,8 @@ BasicGame.Game.prototype = {
         this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
         
         // Debug text
-        this.debugText = this.add.text(16, 64, 'fps: 0', { fontSize: '32px', fill: '#000' });
+        this.debugTextTitle = this.add.text(16, 64, 'ver 1', { fontSize: '12px', fill: '#000' });
+        this.debugText = this.add.text(16, 80, 'fps: 0', { fontSize: '12px', fill: '#000' });
 
         //  Our controls.
         this.cursors = this.input.keyboard.createCursorKeys();
@@ -197,6 +198,10 @@ BasicGame.Game.prototype = {
         //  Add and update the score
         this.score += 10;
         this.scoreText.text = 'Score: ' + this.score;
+        
+        var sessionsRef = firebase.database().ref('sessions');
+        var mySessionRef = sessionsRef.push();
+        mySessionRef.update({ startedAt: firebase.database.ServerValue.TIMESTAMP });
 
     },
 
